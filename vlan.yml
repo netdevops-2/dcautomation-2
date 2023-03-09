@@ -1,0 +1,17 @@
+
+---                     
+# Playbook for creation of VLANs on Cisco Nexus switches
+  - name: create new VLANs 
+    hosts: all
+
+    tasks:
+      - name: provision VLAN
+        cisco.nxos.nxos_vlans:
+          config:
+            - vlan_id: "{{item}}"
+              state: active
+        with_items:
+         -  101
+         -  102
+        tags: add vlans
+

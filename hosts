@@ -1,0 +1,11 @@
+[all:vars]
+ansible_connection = ansible.netcommon.network_cli
+ansible_network_os = cisco.nxos.nxos
+ansible_user=admin
+ansible_password=Admin_1234!
+ansible_command_timeout=180
+gather_fact=no
+[leaf_one]
+sandbox-nxos-1.cisco.com
+[leaf_two]
+131.226.217.151
